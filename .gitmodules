@@ -1,0 +1,3 @@
+[submodule "go-archetype-ms"]
+	path = go-archetype-ms
+	url = https://github.com/gasil96/go-archetype-ms.git
