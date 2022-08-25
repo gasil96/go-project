@@ -1,3 +1,15 @@
 [submodule "go-archetype-ms"]
 	path = go-archetype-ms
 	url = https://github.com/gasil96/go-archetype-ms.git
+[submodule "go-app"]
+	path = go-app
+	url = https://github.com/gasil96/go-app.git
+[submodule "go-api-control"]
+	path = go-api-control
+	url = https://github.com/gasil96/go-api-control.git
+[submodule "go-api-listener"]
+	path = go-api-listener
+	url = https://github.com/gasil96/go-api-listener.git
+[submodule "go-api-business"]
+	path = go-api-business
+	url = https://github.com/gasil96/go-api-business.git
