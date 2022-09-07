@@ -31,7 +31,7 @@ Este repositório contem em sua raiz o link para outros repositórios assim como
   <img src="https://user-images.githubusercontent.com/48265863/188963337-19fc3528-b831-4b27-aab8-a3ff5984b118.png">
 </p>
 
-A arquitetura do MVP desse projeto possui em seus backend quatro microsserviços, dois bancos de dados sendo eles Mysql e MongoDB, uma api-gateway, uma exchange em RabbitMQ, e ainda faz o uso do keycloak para autenticação e gerenciamento de usuários administradores. no frontend temos uma aplicativo desenvolvido com o SDK flutter(dart) e uma aplicação de backoffice desenvolvida em <angular ou vuejs>.
+A arquitetura do MVP desse projeto possui em seu backend quatro microsserviços, dois bancos de dados sendo eles Mysql e MongoDB, uma api-gateway, uma exchange no RabbitMQ, e ainda faz o uso do Keycloak para autenticação e gerenciamento de usuários administradores. No frontend temos uma aplicativo desenvolvido com o SDK flutter(dart) e uma aplicação de backoffice desenvolvida em <angular ou vuejs>.
 
   Observações:
   1º Todo acesso via app irá ser filtrado por um WAF - Web Application Firewal nesse caso [Cloudflare](https://www.cloudflare.com/pt-br/).
