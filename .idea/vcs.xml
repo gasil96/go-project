@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-api-business" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-api-control" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-api-listener" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-archetype-ms" vcs="Git" />
+  </component>
+</project>
