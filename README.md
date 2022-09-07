@@ -50,4 +50,50 @@ A arquitetura do MVP desse projeto possui em seu backend quatro microsserviços,
 * **Amazon S3 - Bucket** --> a descrição vem aqui...
 * **GO App** --> a descrição vem aqui...
 
+## Banco de dados
+
+  TODO - explicar os bancos e os motivos da escolha aqui...
   
+## Microsserviços
+  
+  TODO - explicar cada microsserviço suas principais responsabilidades e documentação de endpoints com openAPI
+
+## Keycloak
+  
+  TODO - explicar no que usamos keycloak (autenticação e criação de usuários/roles)
+ 
+## Amazon S3 - Bucket
+  
+  TODO - explicar o uso do s3-bucket
+  
+## Cloudflare , API-GATEWAY
+  
+  TODO - explicar sobre a escolha da cloudflare e suas ações, tambem explicar oque faz a api-gateway.
+  
+## Observabilidade
+  
+  TODO - IPC, precisa aplica observabilidade nas APIS
+
+## Figma
+  
+  TODO - explicar como utilizamos o Figma para projetar as telas a serem desenvolvidas
+  
+## Flutter| Aplicação Mobile
+  
+  TODO - explicar como foi usado o flutter pra criação de aplicação
+
+## **Heroku** e Consoles utilizados
+ 
+  TODO - explicar tudo sob a heroku, facebeok console, firebase etc...
+  
+## Jira Software | Documentação
+  
+  TODO - explicar como usamos o Jira e documentamos os passos através do SCRUM
+  
+## How To Local
+  
+  TODO - como rodar todo o projeto localmente com docker-compose e flutter 
+  
+## Agradecimentos e Contato
+  
+  TODO - agradecimentos e contatos de todos os envolvidos no projeto. 
