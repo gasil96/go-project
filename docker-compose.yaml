@@ -38,7 +38,7 @@ services:
       - rabbit_mq_go
     environment:
       MONGO_URI: mongodb://root:root@mongo_db_go:27017
-      MONGO_DATABASE: aruba
+      MONGO_DATABASE: pompeia
       RABBIT_HOST: rabbitmq
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
