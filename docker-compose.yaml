@@ -1,29 +1,50 @@
-version: '3.3'
+version: "3.3"
 services:
-  mongo:
-    container_name: "mongo_db_go"
+  mongo_db_go:
+    container_name: mongo_db_go
     image: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     ports:
       - "27017:27017"
-  mysqlsrv:
-    container_name: "mysql_db_go"
+  mysql_db_go:
+    container_name: mysql_db_go
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
-  rabbitmq:
-    container_name: "rabbit_mq_go"
+  rabbit_mq_go:
+    container_name: rabbit_mq_go
     image: rabbitmq:3-management
     expose:
      - "5672"
     ports:
      - "15672:15672"
      - "5672:5672"
+  go-api-listener:
+    container_name: go_api_listener
+    restart: always
+    image: go-api-listener
+    build: ./go-api-listener
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo_db_go
+      - rabbit_mq_go
+    links:
+      - mongo_db_go
+      - rabbit_mq_go
+    environment:
+      MONGO_URI: mongodb://root:root@mongo_db_go:27017
+      MONGO_DATABASE: aruba
+      RABBIT_HOST: rabbitmq
+      RABBIT_USERNAME: guest
+      RABBIT_PASSWORD: guest
   keycloak:
+    profiles:
+      - donostart
     container_name: "keycloak_go"
     image: jboss/keycloak
     ports:
