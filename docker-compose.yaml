@@ -58,6 +58,19 @@ services:
       RABBIT_HOST: rabbitmq
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
+  go-api-business:
+    container_name: go-api-business
+    restart: always
+    image: go-api-business
+    build: ./go-api-business
+    ports:
+      - "8084:8084"
+    depends_on:
+      - go-api-listener
+    links:
+      - go-api-listener
+    environment:
+      API_LISTENER_URL: go-api-listener:8080
   keycloak:
     profiles:
       - donostart
