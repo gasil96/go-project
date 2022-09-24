@@ -4,6 +4,8 @@ Este repositório contem em sua raiz o link para outros repositórios assim como
 
 **TL;DR:** Este projeto se trata de um gerenciador de eventos para usuários que buscam uma decisão rápida para onde ir, nele você podera identificar rapidamente algo que de match com seu gosto e poder verificar os principais detalhes do lugar.
 
+![MOCKUP-GO!](https://user-images.githubusercontent.com/48265863/192113098-bb60b60e-a6e7-4348-a6e7-900a27b0eec9.jpg)
+
 ## Stacks empregadas no projeto
 * Java - 11
 * Maven - 3.8.1
