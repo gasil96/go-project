@@ -82,8 +82,6 @@ Mgo-api-business/src/main/java/br/com/go/configurations/ApplicationConfig.java,
 Kgo-api-control/src/main/java/br/com/go/clients/dtos/Events/PinEventDTO.java,2\3\23402d74e8865be67b85f37af02a6ffe3588a7a0
 F
 go-api-control/pom.xml,5\a\5abfde2389eb8646317a3c261aaad6d6fb5b1c39
-G
-go-api-business/pom.xml,5\7\57579a68855652deed0b3effbfd998a9f6037253
 p
 @go-api-business/src/main/java/br/com/go/ApplicationBusiness.java,5\f\5f0a3f466b25ae51527498022e4c6e0115b6a399
 u
