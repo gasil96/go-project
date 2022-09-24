@@ -3,11 +3,13 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/go-api-business/pom.xml" />
+        <option value="$PROJECT_DIR$/go-api-listener/pom.xml" />
         <option value="$PROJECT_DIR$/go-api-control/pom.xml" />
         <option value="$PROJECT_DIR$/go-api-business/pom.xml" />
         <option value="$PROJECT_DIR$/go-api-listener/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Java 11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
