@@ -30,7 +30,7 @@ Este repositório contem em sua raiz o link para outros repositórios assim como
 
 ## [Arquitetura](https://app.diagrams.net/#G1C4F9m1qkxhmU36VOlm15OinctUIdHRtG)
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/48265863/192113589-6cd8016a-f081-421e-969e-fc7a453a89d9.png">
+  <img src="https://user-images.githubusercontent.com/48265863/192113630-0e02bcdb-b608-4925-b186-d67607bcdeb9.png">
 </p>
 
 A arquitetura do MVP desse projeto possui em seu backend quatro microsserviços, dois bancos de dados sendo eles Mysql e MongoDB, uma api-gateway, uma exchange no RabbitMQ, e ainda faz o uso do Keycloak para autenticação e gerenciamento de usuários administradores. No frontend temos uma aplicativo desenvolvido com o SDK flutter(dart) e uma aplicação de backoffice desenvolvida em <angular ou vuejs>.
