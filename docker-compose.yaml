@@ -30,11 +30,15 @@ services:
     build: ./go-api-control
     ports:
       - "8082:8082"
+    depends_on:
+      - go_api_listener
+    links:
+      - go_api_listener
     environment:
       KEYCLOAK_AUTH_URL: https://keycloak-go.herokuapp.com/auth
       KEYCLOAK_RESOURCE: go-app
       KEYCLOAK_SECRET: tJbyTwUXl7hwr8Nt0O4TEUGceAbFSyE5
-      API_LISTENER_URL: localhost:8080
+      API_LISTENER_URL: go_api_listener:8080
   go_api_listener:
     container_name: go_api_listener
     restart: always
