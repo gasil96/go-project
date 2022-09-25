@@ -94,10 +94,6 @@ u
 Ego-api-business/src/main/java/br/com/go/schedulers/UserScheduler.java,7\b\7b0061ac6c108c998a158f353727b08a4f231e31
 y
 Igo-api-business/src/main/java/br/com/go/schedulers/ListenerScheduler.java,5\9\591dbae552a9d1c3dfda734edab7d8de58680f26
-w
-Ggo-api-listener/src/main/java/br/com/go/services/UploadServiceImpl.java,b\5\b5972d7ae4dba020efe4512be65efaa80c1341be
-y
-Igo-api-listener/src/main/java/br/com/go/controllers/UploadController.java,c\d\cd20ee9fbedc2c96d8d09a3c6bb9fd2307e49768
 x
 Hgo-api-control/src/main/java/br/com/go/services/ListenerServiceImpl.java,d\5\d5fdaba28eb2d9f5df8c0eca4a8b9bdfc25dc880
 z
