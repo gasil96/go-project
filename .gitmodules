@@ -13,3 +13,6 @@
 [submodule "go-api-business"]
 	path = go-api-business
 	url = https://github.com/gasil96/go-api-business.git
+[submodule "go-api-notification"]
+	path = go-api-notification
+	url = https://github.com/gasil96/go-api-notification.git
