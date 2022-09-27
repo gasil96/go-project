@@ -54,8 +54,6 @@ Lgo-api-control/src/main/java/br/com/go/configurations/ApplicationConfig.java,9
 Mgo-api-business/src/main/java/br/com/go/configurations/ApplicationConfig.java,a\7\a7541b64db9a2a3ebae4c525e63a0c7e5359880c
 {
 Kgo-api-control/src/main/java/br/com/go/clients/dtos/Events/PinEventDTO.java,2\3\23402d74e8865be67b85f37af02a6ffe3588a7a0
-F
-go-api-control/pom.xml,5\a\5abfde2389eb8646317a3c261aaad6d6fb5b1c39
 p
 @go-api-business/src/main/java/br/com/go/ApplicationBusiness.java,5\f\5f0a3f466b25ae51527498022e4c6e0115b6a399
 u
@@ -82,16 +80,12 @@ r
 Bgo-api-control/src/main/java/br/com/go/clients/ListenerClient.java,0\1\0102ef1057def626ee27c81d632e87e9938c960f
 ‡
 Wgo-api-control/src/main/java/br/com/go/configurations/handler/RestExceptionHandler.java,9\8\98debc94bba944fd92cc42e1e6aa79a929deafc6
-y
-Igo-api-control/src/main/java/br/com/go/configurations/SecurityConfig.java,b\3\b3a0c84dce0f56a13ba5110fb61d158558d776dd
 o
 ?go-api-control/src/main/java/br/com/go/constants/ErroCodes.java,c\a\cabe0a9e49ef4ba5a9da966030d299c14b3f965d
 J
 go-api-listener/Dockerfile,6\4\643c763da5cd8fcdbc8b7f6398a833b95bf3a85c
 I
 go-api-control/Dockerfile,1\5\15888391f66de1b4d7e418ede5538d029a35027a
-G
-go-api-business/pom.xml,5\7\57579a68855652deed0b3effbfd998a9f6037253
 p
 @go-api-listener/src/main/java/br/com/go/constants/ErroCodes.java,e\4\e4de75d57c51d8ac3dc453c9eb54b2f46aa566eb
 t
