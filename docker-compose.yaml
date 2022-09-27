@@ -55,7 +55,7 @@ services:
     environment:
       MONGO_URI: mongodb://root:root@mongo-db-go:27017
       MONGO_DATABASE: pompeia
-      RABBIT_HOST: rabbitmq
+      RABBIT_HOST: rabbit-mq-go
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
   go-api-notification:
@@ -72,10 +72,10 @@ services:
       - mysql-db-go
       - rabbit-mq-go
     environment:
-      DATASOURCE_URL: jdbc:mysql://mysql_db:3306/babilonia?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC
+      DATASOURCE_URL: jdbc:mysql://mysql-db-go:3306/babilonia?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC
       DATASOURCE_USERNAME: root
       DATASOURCE_PASSWORD: root
-      RABBIT_HOST: rabbitmq
+      RABBIT_HOST: rabbit-mq-go
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
   go-api-business:
