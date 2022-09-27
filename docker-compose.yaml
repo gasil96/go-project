@@ -58,6 +58,26 @@ services:
       RABBIT_HOST: rabbitmq
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
+  go-api-notification:
+    container_name: go-api-notification
+    restart: always
+    image: go-api-notification
+    build: ./go-api-notification
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mysql-db-go
+      - rabbit-mq-go
+    links:
+      - mysql-db-go
+      - rabbit-mq-go
+    environment:
+      DATASOURCE_URL: jdbc:mysql://mysql_db:3306/babilonia?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC
+      DATASOURCE_USERNAME: root
+      DATASOURCE_PASSWORD: root
+      RABBIT_HOST: rabbitmq
+      RABBIT_USERNAME: guest
+      RABBIT_PASSWORD: guest
   go-api-business:
     container_name: go-api-business
     restart: always

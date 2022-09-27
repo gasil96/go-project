@@ -108,8 +108,6 @@ w
 Ggo-api-listener/src/main/java/br/com/go/services/UploadServiceImpl.java,b\5\b5972d7ae4dba020efe4512be65efaa80c1341be
 u
 Ego-api-listener/src/main/java/br/com/go/services/UserServiceImpl.java,c\3\c33bd12333e92821b9a14dea362cb39b08e4ed05
-G
-go-api-listener/pom.xml,1\1\119ee8234850f860bbc7ecf7ed9848628bb6a697
 p
 @go-api-listener/src/main/java/br/com/go/ApplicationListener.java,2\c\2c6760b17474b7335074df9d14ecef125af00075
 I

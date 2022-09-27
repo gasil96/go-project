@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="go-api-control" />
         <module name="go-api-business" />
+        <module name="go-api-notification" />
         <module name="go-api-listener" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="go-api-business" target="11" />
       <module name="go-api-control" target="11" />
       <module name="go-api-listener" target="11" />
+      <module name="go-api-notification" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -23,6 +25,7 @@
       <module name="go-api-business" options="-parameters" />
       <module name="go-api-control" options="-parameters" />
       <module name="go-api-listener" options="-parameters" />
+      <module name="go-api-notification" options="-parameters" />
     </option>
   </component>
 </project>
