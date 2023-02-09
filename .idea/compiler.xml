@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="go-api-control" />
-        <module name="go-api-business" />
         <module name="go-api-notification" />
+        <module name="go-api-business" />
         <module name="go-api-listener" />
       </profile>
     </annotationProcessing>

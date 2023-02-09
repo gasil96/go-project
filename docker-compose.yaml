@@ -1,6 +1,8 @@
 version: "3.3"
 services:
   mongo-db-go:
+    profiles:
+      - donostart
     container_name: mongo-db-go
     image: mongo
     environment:
@@ -9,6 +11,8 @@ services:
     ports:
       - "27017:27017"
   mysql-db-go:
+    profiles:
+      - donostart
     container_name: mysql-db-go
     image: mysql:5.7
     environment:
@@ -24,6 +28,8 @@ services:
      - "15672:15672"
      - "5672:5672"
   go-api-control:
+    profiles:
+      - donostart
     container_name: go-api-control
     restart: always
     image: go_api_control
@@ -40,6 +46,8 @@ services:
       KEYCLOAK_SECRET: tJbyTwUXl7hwr8Nt0O4TEUGceAbFSyE5
       API_LISTENER_URL: go-api-listener:8080
   go-api-listener:
+    profiles:
+      - donostart
     container_name: go-api-listener
     restart: always
     image: go-api-listener
@@ -59,6 +67,8 @@ services:
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
   go-api-notification:
+    profiles:
+      - donostart
     container_name: go-api-notification
     restart: always
     image: go-api-notification
@@ -79,6 +89,8 @@ services:
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
   go-api-business:
+    profiles:
+      - donostart
     container_name: go-api-business
     restart: always
     image: go-api-business
@@ -92,8 +104,6 @@ services:
     environment:
       API_LISTENER_URL: go-api-listener:8080
   keycloak:
-    profiles:
-      - donostart
     container_name: "keycloak_go"
     image: jboss/keycloak
     ports:
