@@ -47,17 +47,25 @@
   "roles": {
     "realm": [
       {
-        "id": "0760af6d-b459-4fa7-b8e0-5232bda40b71",
-        "name": "EVENT_BASIC_MANIPULATION",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "go-app-realm",
-        "attributes": {}
-      },
-      {
-        "id": "23c32f59-d36f-4087-9494-21762bbfe5fe",
-        "name": "EVENT_FULL_MANIPULATION",
-        "composite": false,
+        "id": "db2ebe77-32b6-41d1-8c30-9fd76d17f771",
+        "name": "MANAGER",
+        "composite": true,
+        "composites": {
+          "client": {
+            "go-app-client-id": [
+              "ADMIN",
+              "PARTNER",
+              "PROFILE_INFLUENCER_MANIPULATION",
+              "uma_protection",
+              "TRANSFORM_PROFILE_FULL",
+              "MANAGER",
+              "PROMOTE_EVENT",
+              "EVENT_FULL_MANIPULATION",
+              "VIEW_INFLUENCER_INFORMATIONS",
+              "EVENT_BASIC_MANIPULATION"
+            ]
+          }
+        },
         "clientRole": false,
         "containerId": "go-app-realm",
         "attributes": {}
@@ -81,9 +89,71 @@
         "attributes": {}
       },
       {
-        "id": "d7a132e5-88a9-44a0-a44a-6b06f3cb416a",
-        "name": "VIEW_INFLUENCER_INFORMATIONS",
-        "composite": false,
+        "id": "71fe12f9-4c3e-458f-b532-ffbc2c22ca5a",
+        "name": "PARTNER",
+        "composite": true,
+        "composites": {
+          "client": {
+            "go-app-client-id": [
+              "PROFILE_INFLUENCER_MANIPULATION",
+              "EVENT_FULL_MANIPULATION",
+              "VIEW_INFLUENCER_INFORMATIONS"
+            ]
+          }
+        },
+        "clientRole": false,
+        "containerId": "go-app-realm",
+        "attributes": {}
+      },
+      {
+        "id": "de01811d-49ac-4d70-bd57-bbd992df1769",
+        "name": "ADMIN",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "PARTNER",
+            "offline_access",
+            "MANAGER",
+            "uma_authorization",
+            "default-roles-go-app-realm",
+            "INFLUENCER"
+          ],
+          "client": {
+            "realm-management": [
+              "manage-realm",
+              "view-clients",
+              "manage-clients",
+              "query-clients",
+              "manage-events",
+              "manage-users",
+              "realm-admin",
+              "impersonation",
+              "view-events",
+              "view-identity-providers",
+              "manage-authorization",
+              "manage-identity-providers",
+              "view-authorization",
+              "view-realm",
+              "create-client",
+              "query-realms",
+              "query-groups",
+              "view-users",
+              "query-users"
+            ],
+            "go-app-client-id": [
+              "ADMIN",
+              "PARTNER",
+              "uma_protection",
+              "EVENT_FULL_MANIPULATION",
+              "EVENT_BASIC_MANIPULATION",
+              "VIEW_INFLUENCER_INFORMATIONS",
+              "PROFILE_INFLUENCER_MANIPULATION",
+              "TRANSFORM_PROFILE_FULL",
+              "MANAGER",
+              "PROMOTE_EVENT"
+            ]
+          }
+        },
         "clientRole": false,
         "containerId": "go-app-realm",
         "attributes": {}
@@ -110,25 +180,17 @@
         "attributes": {}
       },
       {
-        "id": "87a489c1-83d9-48bd-bc35-3c4acdc4f582",
-        "name": "TRANSFORM_PROFILE_FULL",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "go-app-realm",
-        "attributes": {}
-      },
-      {
-        "id": "b180e899-38e9-4225-baa0-dc2732798d18",
-        "name": "PROFILE_INFLUENCER_MANIPULATION",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "go-app-realm",
-        "attributes": {}
-      },
-      {
-        "id": "2ce5de85-3c0f-488c-a7fe-39c7dc24bcb1",
-        "name": "PROMOTE_EVENT",
-        "composite": false,
+        "id": "1015b7a3-5b02-4750-b366-f0a295876a67",
+        "name": "INFLUENCER",
+        "composite": true,
+        "composites": {
+          "client": {
+            "go-app-client-id": [
+              "PROMOTE_EVENT",
+              "EVENT_BASIC_MANIPULATION"
+            ]
+          }
+        },
         "clientRole": false,
         "containerId": "go-app-realm",
         "attributes": {}
@@ -356,14 +418,8 @@
           "composite": true,
           "composites": {
             "realm": [
-              "EVENT_FULL_MANIPULATION",
-              "PROFILE_INFLUENCER_MANIPULATION",
-              "EVENT_BASIC_MANIPULATION",
               "offline_access",
-              "TRANSFORM_PROFILE_FULL",
-              "PROMOTE_EVENT",
               "uma_authorization",
-              "VIEW_INFLUENCER_INFORMATIONS",
               "default-roles-go-app-realm"
             ]
           },
@@ -374,14 +430,23 @@
         {
           "id": "6b4e50c8-d97b-4092-a5a0-343859751e1d",
           "name": "PARTNER",
-          "composite": true,
-          "composites": {
-            "realm": [
-              "EVENT_FULL_MANIPULATION",
-              "PROFILE_INFLUENCER_MANIPULATION",
-              "VIEW_INFLUENCER_INFORMATIONS"
-            ]
-          },
+          "composite": false,
+          "clientRole": true,
+          "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
+          "attributes": {}
+        },
+        {
+          "id": "fcd14802-6aaf-4202-84a1-222da3c3b8d6",
+          "name": "PROFILE_INFLUENCER_MANIPULATION",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
+          "attributes": {}
+        },
+        {
+          "id": "8cb02a7e-0309-4b66-a7ef-28011ac2ed98",
+          "name": "TRANSFORM_PROFILE_FULL",
+          "composite": false,
           "clientRole": true,
           "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
           "attributes": {}
@@ -397,17 +462,39 @@
         {
           "id": "fc593c37-0bd3-468b-bb4b-f299b658d7ad",
           "name": "MANAGER",
-          "composite": true,
-          "composites": {
-            "realm": [
-              "EVENT_FULL_MANIPULATION",
-              "PROFILE_INFLUENCER_MANIPULATION",
-              "EVENT_BASIC_MANIPULATION",
-              "TRANSFORM_PROFILE_FULL",
-              "PROMOTE_EVENT",
-              "VIEW_INFLUENCER_INFORMATIONS"
-            ]
-          },
+          "composite": false,
+          "clientRole": true,
+          "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
+          "attributes": {}
+        },
+        {
+          "id": "6dcb6d41-fd35-4b52-876a-bbb7c1b6c54b",
+          "name": "PROMOTE_EVENT",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
+          "attributes": {}
+        },
+        {
+          "id": "c3ee5bf5-7122-42f1-8a4d-3857ac55a664",
+          "name": "EVENT_FULL_MANIPULATION",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
+          "attributes": {}
+        },
+        {
+          "id": "423ef339-1364-4320-9f5d-b7d1d98b9e75",
+          "name": "EVENT_BASIC_MANIPULATION",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
+          "attributes": {}
+        },
+        {
+          "id": "08003311-2f04-471c-85ff-685727f2890b",
+          "name": "VIEW_INFLUENCER_INFORMATIONS",
+          "composite": false,
           "clientRole": true,
           "containerId": "36b9d6fe-78e0-45ba-98f3-c1598a43354a",
           "attributes": {}
@@ -560,7 +647,20 @@
       "enabled": true,
       "totp": false,
       "emailVerified": false,
+      "firstName": "Gabriel",
+      "email": "gasil96@gmail.om",
       "serviceAccountClientId": "go-app-client-id",
+      "attributes": {
+        "PHOTO_URL": [
+          ""
+        ],
+        "CELL_NUMBER": [
+          "0"
+        ],
+        "PROFILE": [
+          "GOWER"
+        ]
+      },
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
