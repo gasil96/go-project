@@ -16,3 +16,6 @@
 [submodule "go-api-notification"]
 	path = go-api-notification
 	url = https://github.com/gasil96/go-api-notification.git
+[submodule "go-job-event-increment"]
+	path = go-job-event-increment
+	url = https://github.com/gasil96/go-job-event-increment
