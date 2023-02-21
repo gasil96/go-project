@@ -8,5 +8,6 @@
     <mapping directory="$PROJECT_DIR$/go-api-notification" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/go-app" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/go-archetype-ms" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-job-event-increment" vcs="Git" />
   </component>
 </project>
