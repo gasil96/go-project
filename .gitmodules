@@ -19,3 +19,6 @@
 [submodule "go-job-event-increment"]
 	path = go-job-event-increment
 	url = https://github.com/gasil96/go-job-event-increment
+[submodule "go-kubernetes-configs"]
+	path = go-kubernetes-configs
+	url = https://github.com/gasil96/go-kubernetes-configs.git
