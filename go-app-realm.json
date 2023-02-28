@@ -6,8 +6,8 @@
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
-  "accessTokenLifespan": 300,
-  "accessTokenLifespanForImplicitFlow": 900,
+  "accessTokenLifespan": 2592000,
+  "accessTokenLifespanForImplicitFlow": 2592000,
   "ssoSessionIdleTimeout": 1800,
   "ssoSessionMaxLifespan": 36000,
   "ssoSessionIdleTimeoutRememberMe": 0,
@@ -641,26 +641,13 @@
   "webAuthnPolicyPasswordlessAcceptableAaguids": [],
   "users": [
     {
-      "id": "cccaa3f2-20f5-4c4a-aecd-21f43944f95a",
-      "createdTimestamp": 1675976763540,
+      "id": "4d3ba5e8-5d53-432c-a50f-9ae380cb6b2b",
+      "createdTimestamp": 1676060153933,
       "username": "service-account-go-app-client-id",
       "enabled": true,
       "totp": false,
       "emailVerified": false,
-      "firstName": "Gabriel",
-      "email": "gasil96@gmail.om",
       "serviceAccountClientId": "go-app-client-id",
-      "attributes": {
-        "PHOTO_URL": [
-          ""
-        ],
-        "CELL_NUMBER": [
-          "0"
-        ],
-        "PROFILE": [
-          "GOWER"
-        ]
-      },
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
@@ -687,12 +674,6 @@
           "view-users",
           "query-users",
           "view-identity-providers"
-        ],
-        "go-app-client-id": [
-          "ADMIN",
-          "PARTNER",
-          "uma_protection",
-          "MANAGER"
         ]
       },
       "notBefore": 0,
@@ -994,7 +975,7 @@
       ],
       "authorizationSettings": {
         "allowRemoteResourceManagement": true,
-        "policyEnforcementMode": "ENFORCING",
+        "policyEnforcementMode": "DISABLED",
         "resources": [
           {
             "name": "Default Resource",
@@ -1643,7 +1624,16 @@
     "xXSSProtection": "1; mode=block",
     "strictTransportSecurity": "max-age=31536000; includeSubDomains"
   },
-  "smtpServer": {},
+  "smtpServer": {
+    "password": "**********",
+    "starttls": "false",
+    "auth": "true",
+    "port": "465",
+    "host": "smtp.gmail.com",
+    "from": "go.app.email@gmail.com",
+    "ssl": "true",
+    "user": "go.app.email"
+  },
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"
@@ -1763,7 +1753,7 @@
     ],
     "org.keycloak.userprofile.UserProfileProvider": [
       {
-        "id": "7e5f21c8-2d1c-4ca4-b7b4-2083952d794e",
+        "id": "87e74a21-5ebf-4d6c-abb6-d427e7f44c83",
         "providerId": "declarative-user-profile",
         "subComponents": {},
         "config": {}
