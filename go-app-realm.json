@@ -71,24 +71,6 @@
         "attributes": {}
       },
       {
-        "id": "7b31a2a4-6280-4dca-8b15-d78005b4dbcc",
-        "name": "offline_access",
-        "description": "${role_offline-access}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "go-app-realm",
-        "attributes": {}
-      },
-      {
-        "id": "a61b86c8-225d-4e64-a642-cce36991c797",
-        "name": "uma_authorization",
-        "description": "${role_uma_authorization}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "go-app-realm",
-        "attributes": {}
-      },
-      {
         "id": "71fe12f9-4c3e-458f-b532-ffbc2c22ca5a",
         "name": "PARTNER",
         "composite": true,
@@ -106,68 +88,11 @@
         "attributes": {}
       },
       {
-        "id": "de01811d-49ac-4d70-bd57-bbd992df1769",
-        "name": "ADMIN",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "PARTNER",
-            "offline_access",
-            "MANAGER",
-            "uma_authorization",
-            "default-roles-go-app-realm",
-            "INFLUENCER"
-          ],
-          "client": {
-            "realm-management": [
-              "manage-realm",
-              "view-clients",
-              "manage-clients",
-              "query-clients",
-              "manage-events",
-              "manage-users",
-              "realm-admin",
-              "impersonation",
-              "view-events",
-              "view-identity-providers",
-              "manage-authorization",
-              "manage-identity-providers",
-              "view-authorization",
-              "view-realm",
-              "create-client",
-              "query-realms",
-              "query-groups",
-              "view-users",
-              "query-users"
-            ],
-            "go-app-client-id": [
-              "ADMIN",
-              "PARTNER",
-              "uma_protection",
-              "EVENT_FULL_MANIPULATION",
-              "EVENT_BASIC_MANIPULATION",
-              "VIEW_INFLUENCER_INFORMATIONS",
-              "PROFILE_INFLUENCER_MANIPULATION",
-              "TRANSFORM_PROFILE_FULL",
-              "MANAGER",
-              "PROMOTE_EVENT"
-            ]
-          }
-        },
-        "clientRole": false,
-        "containerId": "go-app-realm",
-        "attributes": {}
-      },
-      {
         "id": "17c1d6ac-475d-470c-96a2-c05fd6be4060",
         "name": "default-roles-go-app-realm",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
-          "realm": [
-            "offline_access",
-            "uma_authorization"
-          ],
           "client": {
             "account": [
               "manage-account",
@@ -418,8 +343,6 @@
           "composite": true,
           "composites": {
             "realm": [
-              "offline_access",
-              "uma_authorization",
               "default-roles-go-app-realm"
             ]
           },
@@ -678,14 +601,6 @@
       },
       "notBefore": 0,
       "groups": []
-    }
-  ],
-  "scopeMappings": [
-    {
-      "clientScope": "offline_access",
-      "roles": [
-        "offline_access"
-      ]
     }
   ],
   "clientScopeMappings": {
