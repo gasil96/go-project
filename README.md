@@ -30,16 +30,16 @@ curtidos, traçando rota, compartilhando o evento entre outras funcionalidades..
   <img src="https://user-images.githubusercontent.com/48265863/226204658-4d7e3af0-8abc-49ee-af5f-a29db5b35bf9.png">
 </p>
 
-A arquitetura do MVP (1.0.0 - Beta) desse projeto possui em seu backend quatro microsserviços, dois bancos de dados Mysql em uma mesma instância
-Amazon RDS e um banco NoSQL no MongoDB Atlas. Além de ser alocado em um clsuter kubernetes na DigitalOcean com um LoadBalance com NGinx, tem uma
-exchange no RabbitMQ via CloudAMQP, e ainda faz o uso do Keycloak para autenticação e gerenciamento de usuários administradores. em acesso
-externo temos a api google maps para enriquecer o nosso evento durante o processo de criação.
+A arquitetura da versão MVP (1.0.0 - Beta) deste projeto inclui quatro microsserviços em seu backend, dois bancos de dados MySQL em uma única
+instância Amazon RDS e um banco NoSQL no MongoDB Atlas. Além disso, está alocada em um cluster Kubernetes na DigitalOcean, com um balanceador de
+carga com NGINX e utiliza uma exchange no RabbitMQ via CloudAMQP. Para autenticação e gerenciamento de usuários administradores, o Keycloak é
+utilizado. Para enriquecer o evento durante o processo de criação, há o acesso externo da API do Google Maps.
 
-No frontend temos uma aplicativo desenvolvido com o SDK Flutter(Dart).
+No frontend, o aplicativo foi desenvolvido com o SDK Flutter (Dart).
 
-Vale ressaltar que tambem foi criado uma operação apartarda do Cluster principal, onde temos um job em Spring que ao rodar, captura e salva de
-uma vez só varios eventos listados em uma planilha, processo esse que pode ser acionado manualmente com uma planilha local ou a cada X horas
-através de um scheduller que busca no S3 Bucket.
+Também foi criada uma operação separada do cluster principal, onde há um job em Spring que captura e salva vários eventos listados em uma
+planilha de uma só vez. Esse processo pode ser acionado manualmente com uma planilha local ou a cada X horas através de um scheduler que busca no
+S3 Bucket.
 
 Observações:
 1 - Todo acesso via app é filtrado por um WAF - Web Application Firewal nesse caso [Cloudflare](https://www.cloudflare.com/pt-br/).
