@@ -230,7 +230,7 @@ forma mais colaborativa e eficiente, tornando o processo de desenvolvimento mais
 ## Agradecimentos e Contato
 
 Atualmente em Março de 2023 o GO é um projeto ativo e mantido de forma completamente independente. Caso deseje fazer uma parceria ou ter seu
-evento em destaque no nosso APP, acesse[site](http://goanywhere.app.br) ou entre em contato via Whats APP: (91) 9 8217-29201 (Gabriel)
+evento em destaque no nosso APP, acesse o [site](http://goanywhere.app.br) ou entre em contato via Whats APP: (91) 9 8217-29201 (Gabriel)
 
 "Comece onde você está. Use o que você tem. Faça o que você pode." - Arthur Ashe
 
