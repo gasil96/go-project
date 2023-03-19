@@ -2,55 +2,80 @@
 
 Este repositório contem em sua raiz o link para outros repositórios assim como o docker-compose com todos os seus containers orquestrados.
 
-**TL;DR:** Este projeto se trata de um gerenciador de eventos para usuários que buscam uma decisão rápida para onde ir, nele você podera identificar rapidamente algo que de match com seu gosto e poder verificar os principais detalhes do lugar.
+**TL;DR:** Este projeto se trata de um gerenciador de eventos para usuários que buscam uma decisão rápida para onde ir, nele você podera 
+identificar rapidamente algo que de match com seu gosto e poder verificar os principais detalhes do lugar, adicionando a sua lista de eventos 
+curtidos, traçando rota, compartilhando o evento entre outras funcionalidades...
 
 ![MOCKUP-GO!](https://user-images.githubusercontent.com/48265863/192113098-bb60b60e-a6e7-4348-a6e7-900a27b0eec9.jpg)
 
-## Stacks empregadas no projeto
+## Stacks/Serviços empregadas no projeto (como um todo)
+
+Backend
 * Java - 11
 * Maven - 3.8.1
 * Spring Boot - 2.6.1
-* RabbitMQ - 3.10.7
-* MongoDB - 6.0
+* Spring Cloud - Open Feign 
+* Swagger
+* RabbitMQ - 3.10.7 (CloudAMQP)
+* Apache Archetype
+* MongoDB (Atlas) - 6.0
 * MySQL - 5.7
 * Keycloak - 19.01
 * Flutter - 2.0
 * Dart - 2.18
+* One Signal
 * Docker - 20.20.12
 * Docker Compose - 2.2.3
-* Heroku
+* Heroku (Inicialmente)
 * AWS - S3 Bucket e IAM
-* Cloudflare
+* Cloudflare 
+* Kubernetes
+* Nginx 
 * Figma
+* Wordpress
+* Miro
 * Firebase
 * Facebook Console
 * Google Console
 * XCode
-* Jira Software
+* Jira
 
 ## [Arquitetura](https://app.diagrams.net/#G1C4F9m1qkxhmU36VOlm15OinctUIdHRtG)
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/48265863/218288638-abad4067-1bd6-4d42-b4b5-b11a547cc466.png">
+  <img src="https://user-images.githubusercontent.com/48265863/226160076-20c715da-8ec0-430a-800a-777843b35cd1.png">
 </p>
 
-A arquitetura do MVP desse projeto possui em seu backend quatro microsserviços, dois bancos de dados sendo eles Mysql e MongoDB, uma api-gateway, uma exchange no RabbitMQ, e ainda faz o uso do Keycloak para autenticação e gerenciamento de usuários administradores. No frontend temos uma aplicativo desenvolvido com o SDK flutter(dart) e uma aplicação de backoffice desenvolvida em <angular ou vuejs>.
+A arquitetura do MVP (1.0.0 - Beta) desse projeto possui em seu backend quatro microsserviços, dois bancos de 
+dados Mysql em uma mesma instância Amazon RDS e um banco NoSQL no MongoDB Atlas. Além de
+ser alocado em um clsuter kubernetes na DigitalOcean com um LoadBalance com NGinx, tem uma exchange no RabbitMQ via CloudAMQP, e ainda faz o 
+uso do Keycloak para autenticação e gerenciamento de usuários administradores. em acesso externo temos a api google maps para enriquecer o 
+nosso evento durante o processo de criação. 
 
-  Observações:
-  1º Todo acesso via app irá ser filtrado por um WAF - Web Application Firewal nesse caso [Cloudflare](https://www.cloudflare.com/pt-br/).
+No frontend temos 
+uma aplicativo desenvolvido com o SDK Flutter(Dart).
+
+Vale ressltar que tambem foi criado uma operação apartarda do Cluster principal, onde temos um job em Spring que ao rodar, captura e salva de 
+uma vez só varios eventos listados em uma planilha, processo esse que pode ser acionado manualmente com uma planilha local ou a cada X horas 
+através de um scheduller que busca no S3 Bucket.
+
+Observações:
+1 - Todo acesso via app é filtrado por um WAF - Web Application Firewal nesse caso [Cloudflare](https://www.cloudflare.com/pt-br/).
 
 * **Cloudflare** --> a descrição vem aqui...
-* **api-gateway** --> a descrição vem aqui...
+* **Kubernetes** --> a descrição vem aqui...
 * **api-control(BFF)** --> a descrição vem aqui...
 * **Keycloak** --> a descrição vem aqui...
 * **api-business** --> a descrição vem aqui...
 * **api-listener** --> a descrição vem aqui...
 * **api-notification** --> a descrição vem aqui...
 * **Exchange RabbitMQ** --> a descrição vem aqui...
-* **MySQL** --> a descrição vem aqui...
-* **MongoDB** --> a descrição vem aqui...
-* **Dashboard Admin** --> a descrição vem aqui...
+* **MySQL (Babilonia)** --> a descrição vem aqui...
+* **MySQL (Constantinopla)** --> a descrição vem aqui...
+* **MongoDB (Pompeia)** --> a descrição vem aqui...
+* **job-event-increment (event.list)** --> a descrição vem aqui...
 * **Amazon S3 - Bucket** --> a descrição vem aqui...
-* **GO App** --> a descrição vem aqui...
+* **Google Map API** --> a descrição vem aqui...
+* **GO: Em qualquer Lugar** --> a descrição vem aqui...
 
 ## Banco de dados
 
