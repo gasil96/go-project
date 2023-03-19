@@ -41,6 +41,8 @@ Também foi criada uma operação separada do cluster principal, onde há um job
 planilha de uma só vez. Esse processo pode ser acionado manualmente com uma planilha local ou a cada X horas através de um scheduler que busca no
 S3 Bucket.
 
+### Descrição sobre suas funcionalidades
+
 * **Cloudflare** - Usado como WAF, ou seja uma camada a mais de segurança na aplicação
 
 * **Kubernetes** - Usado no projeto porque é uma plataforma confiável e eficiente para gerenciar e orquestrar contêineres em ambientes de nuvem.
