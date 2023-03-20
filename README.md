@@ -158,6 +158,7 @@ Gerenciamento de Usuários e Roles
 ### MongoDB Atlas (MongoDB) - pompeia
 
 Gerenciametno de Eventos e Tags
+
 ![POMPEIA](https://user-images.githubusercontent.com/48265863/226209870-04ec0a50-5a3e-491b-b2e5-bed8be559989.png)
 
 ## Docker Compose
@@ -230,7 +231,7 @@ forma mais colaborativa e eficiente, tornando o processo de desenvolvimento mais
 ## Agradecimentos e Contato
 
 Atualmente em Março de 2023 o GO é um projeto ativo e mantido de forma completamente independente. Caso deseje fazer uma parceria ou ter seu
-evento em destaque no nosso APP, acesse o nosso [site](http://goanywhere.app.br) ou entre em contato via Whats APP: (91) 9 8217-29201 (Gabriel)
+evento em destaque no nosso APP, acesse o nosso [site](http://goanywhere.app.br) ou entre em contato via Whats APP: (91) 9 8217-9201 (Gabriel)
 
 "Comece onde você está. Use o que você tem. Faça o que você pode." - Arthur Ashe
 
