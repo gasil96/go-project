@@ -10,19 +10,19 @@ curtidos, traçando rota, compartilhando o evento entre outras funcionalidades..
 
 ## Stacks e Serviços empregadas no projeto.
 
-| Back-end | Front-end | Banco de Dados | DevOps/Cloud | Ferramentas |
-|----------|-----------|----------------|--------------|-------------|
-| Java 11 | Flutter 2.0 | MongoDB (Atlas) 6.0 | Docker 20.20.12 | Github Actions |
-| Maven 3.8.1 | Dart 2.18 | MySQL 5.7 | Docker Compose 2.2.3 | Cloudflare |
-| Spring Boot 2.6.1 | Figma | | Heroku | Kubernetes |
-| Spring Cloud - Open Feign | | | AWS S3 Bucket e IAM | Nginx |
-| Swagger | | | | Firebase |
+| Back-end | Front-end | Banco de Dados | DevOps/Cloud | Ferramentas      |
+|----------|-----------|----------------|--------------|------------------|
+| Java 11 | Flutter 2.0 | MongoDB (Atlas) 6.0 | Docker 20.20.12 | Github Actions   |
+| Maven 3.8.1 | Dart 2.18 | MySQL 5.7 | Docker Compose 2.2.3 | Cloudflare       |
+| Spring Boot 2.6.1 | Figma | | Heroku | Kubernetes       |
+| Spring Cloud - Open Feign | | | AWS S3 Bucket e IAM | Nginx            |
+| Swagger | | | | Firebase         |
 | RabbitMQ 3.10.7 (CloudAMQP) | | | | Facebook Console |
-| Keycloak 19.01 | | | | Google Console |
-| | | | | XCode |
-| | | | | Jira |
-| | | | | Slack |
-| | | | | Draw.io |
+| Keycloak 19.01 | | | | Google Consoles  |
+| | | | | XCode            |
+| | | | | Jira             |
+| | | | | Slack            |
+| | | | | Draw.io          |
 
 ## [Arquitetura](https://app.diagrams.net/#G1C4F9m1qkxhmU36VOlm15OinctUIdHRtG)
 
