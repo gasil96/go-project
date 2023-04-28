@@ -1,20 +1,18 @@
 version: "3.3"
 services:
   mongo-db-go:
-    profiles:
-      - donostart
     container_name: mongo-db-go
     image: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     ports:
-      - "27017:27017"
+      - 27017:27017
   mysql-db-go:
-    profiles:
-      - donostart
     container_name: mysql-db-go
-    image: mysql:5.7
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
@@ -27,6 +25,14 @@ services:
     ports:
      - "15672:15672"
      - "5672:5672"
+  keycloak-go:
+    container_name: keycloak-go
+    image: jboss/keycloak
+    ports:
+      - 9000:8080
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
   go-api-control:
     profiles:
       - donostart
@@ -35,19 +41,17 @@ services:
     image: go_api_control
     build: ./go-api-control
     ports:
-      - "8082:8082"
+      - "8082:8080"
     depends_on:
       - go-api-listener
     links:
       - go-api-listener
     environment:
-      KEYCLOAK_AUTH_URL: https://keycloak-go.herokuapp.com/auth
+      KEYCLOAK_AUTH_URL: http://keycloak-go/auth
       KEYCLOAK_RESOURCE: go-app
       KEYCLOAK_SECRET: tJbyTwUXl7hwr8Nt0O4TEUGceAbFSyE5
       API_LISTENER_URL: go-api-listener:8080
   go-api-listener:
-    profiles:
-      - donostart
     container_name: go-api-listener
     restart: always
     image: go-api-listener
@@ -67,14 +71,12 @@ services:
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
   go-api-notification:
-    profiles:
-      - donostart
     container_name: go-api-notification
     restart: always
     image: go-api-notification
     build: ./go-api-notification
     ports:
-      - "8086:8086"
+      - "8086:8080"
     depends_on:
       - mysql-db-go
       - rabbit-mq-go
@@ -89,25 +91,15 @@ services:
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
   go-api-business:
-    profiles:
-      - donostart
     container_name: go-api-business
     restart: always
     image: go-api-business
     build: ./go-api-business
     ports:
-      - "8084:8084"
+      - "8084:8080"
     depends_on:
       - go-api-listener
     links:
       - go-api-listener
     environment:
       API_LISTENER_URL: go-api-listener:8080
-  keycloak:
-    container_name: "keycloak_go"
-    image: jboss/keycloak
-    ports:
-        - 9000:8080
-    environment:
-        - KEYCLOAK_USER=admin
-        - KEYCLOAK_PASSWORD=admin
