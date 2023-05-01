@@ -1,57 +1,13 @@
 version: "3.3"
 services:
-  mongo-db-go:
-    container_name: mongo-db-go
-    image: mongo
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root
-    ports:
-      - 27017:27017
-  mysql-db-go:
-    container_name: mysql-db-go
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3306:3306"
-  rabbit-mq-go:
-    container_name: rabbit-mq-go
-    image: rabbitmq:3-management
-    expose:
-     - "5672"
-    ports:
-     - "15672:15672"
-     - "5672:5672"
-  keycloak:
-    image: quay.io/keycloak/keycloak:20.0.0
-    environment:
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-      KEYCLOAK_FEATURES: "+upload-scripts"
-    ports:
-      - "8080:8080"
-    command:
-      - "-Djboss.bind.address=0.0.0.0"
   go-api-control:
-    profiles:
-      - donostart
     container_name: go-api-control
     restart: always
     image: go_api_control
     build: ./go-api-control
     ports:
       - "8082:8080"
-    depends_on:
-      - go-api-listener
-    links:
-      - go-api-listener
     environment:
-      KEYCLOAK_AUTH_URL: http://keycloak-go/auth
-      KEYCLOAK_RESOURCE: go-app
-      KEYCLOAK_SECRET: tJbyTwUXl7hwr8Nt0O4TEUGceAbFSyE5
       API_LISTENER_URL: go-api-listener:8080
   go-api-listener:
     container_name: go-api-listener
@@ -60,18 +16,6 @@ services:
     build: ./go-api-listener
     ports:
       - "8080:8080"
-    depends_on:
-      - mongo-db-go
-      - rabbit-mq-go
-    links:
-      - mongo-db-go
-      - rabbit-mq-go
-    environment:
-      MONGO_URI: mongodb://root:root@mongo-db-go:27017
-      MONGO_DATABASE: pompeia
-      RABBIT_HOST: rabbit-mq-go
-      RABBIT_USERNAME: guest
-      RABBIT_PASSWORD: guest
   go-api-notification:
     container_name: go-api-notification
     restart: always
@@ -79,19 +23,6 @@ services:
     build: ./go-api-notification
     ports:
       - "8086:8080"
-    depends_on:
-      - mysql-db-go
-      - rabbit-mq-go
-    links:
-      - mysql-db-go
-      - rabbit-mq-go
-    environment:
-      DATASOURCE_URL: jdbc:mysql://mysql-db-go:3306/babilonia?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC
-      DATASOURCE_USERNAME: root
-      DATASOURCE_PASSWORD: root
-      RABBIT_HOST: rabbit-mq-go
-      RABBIT_USERNAME: guest
-      RABBIT_PASSWORD: guest
   go-api-business:
     container_name: go-api-business
     restart: always
@@ -99,9 +30,5 @@ services:
     build: ./go-api-business
     ports:
       - "8084:8080"
-    depends_on:
-      - go-api-listener
-    links:
-      - go-api-listener
     environment:
       API_LISTENER_URL: go-api-listener:8080
