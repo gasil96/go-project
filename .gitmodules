@@ -22,3 +22,6 @@
 [submodule "go-kubernetes-configs"]
 	path = go-kubernetes-configs
 	url = https://github.com/gasil96/go-kubernetes-configs.git
+[submodule "go-dashboard"]
+	path = go-dashboard
+	url = https://github.com/gasil96/go-dashboard
