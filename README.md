@@ -230,10 +230,7 @@ O Slack foi usado para manter a comunicação em tempo real entre a equipe, perm
 projeto e facilitando a organização de reuniões periódicas, como as daily scrums e as retrospectivas. Isso permitiu que a equipe trabalhasse de
 forma mais colaborativa e eficiente, tornando o processo de desenvolvimento mais ágil e assertivo.
 
-## Agradecimentos e Contato
-
-Atualmente em Março de 2023 o GO é um projeto ativo e mantido de forma completamente independente. Caso deseje fazer uma parceria ou ter seu
-evento em destaque no nosso APP, acesse o nosso [site](http://goanywhere.app.br) ou entre em contato via Whats APP: (91) 9 8217-9201 (Gabriel)
+----
 
 "Comece onde você está. Use o que você tem. Faça o que você pode." - Arthur Ashe
 
